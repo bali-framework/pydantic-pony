@@ -64,19 +64,18 @@ def test_defaults() -> None:
     check_data = data.copy()
     del check_data["updated"]
     del check_data["created"]
+    car1_data = {'id': 1, 'make': 'AlfaRomeo', 'model': 'STELVIO', 'owner': 1}
+    car2_data = {'id': 2, 'make': 'Mercedes-Benz', 'model': 'GLA', 'owner': 1}
+
     assert check_data == {
         'age': 18,
-        'cars': [{
-            'id': 1,
-            'make': 'AlfaRomeo',
-            'model': 'STELVIO',
-            'owner': 1
-        }, {
-            'id': 2,
-            'make': 'Mercedes-Benz',
-            'model': 'GLA',
-            'owner': 1
-        }],
+        'cars': [car1_data, car2_data],
+        'id': 1,
+        'name': 'Tommy',
+        'passport': 1
+    } or check_data == {
+        'age': 18,
+        'cars': [car2_data, car1_data],
         'id': 1,
         'name': 'Tommy',
         'passport': 1
