@@ -23,6 +23,7 @@ class OrmModel(BaseModel):
 
         return super().from_orm(new_obj)
 
+
 def pony_to_pydantic(
     db_model: Type,
     *,
