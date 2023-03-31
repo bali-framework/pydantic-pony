@@ -1,0 +1,6 @@
+-r requirements.txt
+
+coverage==6.2
+pytest>=6.1.2,<7
+pytest-cov==2.12.0
+pytest-mock==3.7.0
